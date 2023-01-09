@@ -1,0 +1,25 @@
+Case1 : axios(url, [, config])
+  GET 요청 전송 (기본 메서드)
+  axios('/user/12345');
+  axios() 함수에 인자로 url과 기타 옵션을 넣어 요청을 보낼 수 있다.
+
+Case2 : axios(config)
+  POST 요청 전송
+  axios({
+    method: 'post',     //요청 메서드
+    url: 'user/12345',  //요청을 보낼 url
+    data: {
+      firstName: 'Fred',
+      lastName: 'Flintstone'
+    }
+  });
+  또는 config 관련 옵션을 객체로 넣어 요청을 보낼 수도 있습니다.
+
+Case3 : axios.method(url[, data[, config]])
+  axios.get(url[, config])          //GET
+  axios.post(url[, data[, config]]) //POST
+  axios.put(url[, data[, config]])  //PUT
+  axios.patch(url[, data[, config]])//PATCH
+  axios.delete(url[, config])       //DELETE
+
+axios.request(config)
